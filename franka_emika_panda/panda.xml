@@ -55,6 +55,7 @@
     <mesh name="link6_c" file="link6.stl"/>
     <mesh name="link7_c" file="link7.stl"/>
     <mesh name="hand_c" file="hand.stl"/>
+    <mesh name="mallet" file="mallet.stl"/>
 
     <!-- Visual meshes -->
     <mesh file="link0_0.obj"/>
@@ -237,8 +238,18 @@
                         <geom class="fingertip_pad_collision_2"/>
                         <geom class="fingertip_pad_collision_3"/>
                         <geom class="fingertip_pad_collision_4"/>
-                        <geom class="fingertip_pad_collision_5"/>
+                        <geom class="fingertip_pad_collision_5"/> 
                       </body>
+                      <body name="mallet" pos="0 0 0.15" quat="1 -1 0 0">
+                          <!-- Collision geom -->
+                          <geom mesh="mallet" material="white" class="collision"/>
+                          <!-- Visual geom -->
+                          <geom mesh="mallet" material="white" class="visual" rgba="0.8 0 0.2 1"/>
+                          <inertial mass="0.73" pos="-0.01 0 0.03" diaginertia="0.001 0.0025 0.0017"/>
+                      </body>
+
+                      
+                      
                     </body>
                   </body>
                 </body>

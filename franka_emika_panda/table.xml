@@ -6,6 +6,7 @@
         <material name="grey" specular="0.5" shininess="0.25" rgba="0.8 0.8 0.8 1"/>
         <material name="red" specular="0.5" shininess="0.25" rgba="1.0 0.0 0.0 1"/>
         <material name="blue" specular="0.5" shininess="0.25" rgba="0.0 0.0 1.0 1"/>
+        <material name="lilac" specular="0.5" shininess="0.25" rgba="0.6 0.4 0.8 0.75"/>
         <material name="transparent" specular="0.5" shininess="0.25" rgba="0.0 0.0 1.0 0"/>
         <mesh name="rim" file="table_rim.stl" scale="0.001 0.001 0.001" smoothnormal="true"/>
     </asset>
@@ -13,7 +14,7 @@
     <default>
         <geom condim="4" solref="0.01 0.2"/>
         <default class="rim">
-            <geom type="box" material="grey" condim="6" friction="10000 0.0 0.0" priority="1"
+            <geom type="box" material="black" condim="6" friction="10000 0.0 0.0" priority="1"
                   solref="0.0075 0.1" solimp="0.99 0.999 0.001 0.5 2"/>
         </default>
     </default>
@@ -21,30 +22,30 @@
     <worldbody>
         <body name="table">
             <body name="table_surface">
-                <geom name="surface" type="box" material="white" size="1.064 0.609 0.0505" pos="1 0 -0.0505"
+                <geom name="surface" type="box" material="white" size="1.064 0.609 0.0505" pos="1.3 0 0.15"
                       condim="4" friction="0.08 0.08 0.0" priority="1"
                       solref="0.0125 0.5" solimp="0.9 0.999 0.001 0.5 2"/>
             </body>
             <body name="rim">
-                <geom name="rim_home_l" class="rim" type="mesh" mesh="rim" pos="2.064 0.609 0"/>
-                <geom name="rim_home_r" class="rim" type="mesh" mesh="rim" pos="2.064 -0.609 0" quat="0 0 0 1"/>
-                <geom name="rim_home_top" class="rim" size="0.045 0.519 0.01" pos="-0.064 0 0"
+                <geom name="rim_home_l" class="rim" type="mesh" mesh="rim" pos="0.281 0.322 0.2008"/>
+                <geom name="rim_home_r" class="rim" type="mesh" mesh="rim" pos="0.281 -0.322 0.2008" quat="0 0 0 1"/>
+                <geom name="rim_home_top" class="rim" size="0.045 0.519 0.01" pos="0.281 0 0.22"
                       contype="0" conaffinity="0"/>
-                <geom name="rim_left" class="rim" size="1.064 0.045 0.015" pos="1 0.609 0"/>
-                <geom name="rim_right" class="rim" size="1.064 0.045 0.015" pos="1 -0.609 0"/>
-                <geom name="rim_away_l" class="rim" type="mesh" mesh="rim" pos="2.064 0.609 0"/>
-                <geom name="rim_away_r" class="rim" type="mesh" mesh="rim" pos="-0.064 -0.609 0" quat="0 0 0 1"/>
-                <geom name="rim_away_top" class="rim" size="0.045 0.519 0.01" pos="-0.064 0.609 0"
-                      contype="0" conaffinity="0"/>
+                <geom name="rim_left" class="rim" size="1.064 0.045 0.015" pos="1.3 0.564 0.2155"/>
+                <geom name="rim_right" class="rim" size="1.064 0.045 0.015" pos="1.3 -0.564 0.2155"/>  
+                <geom name="rim_away_l" class="rim" type="mesh" mesh="rim" pos="2.319 0.322 0.2008"/>
+                <geom name="rim_away_r" class="rim" type="mesh" mesh="rim" pos="2.319 -0.322 0.2008" quat="0 0 0 1"/>
+                <geom name="rim_away_top" class="rim" size="0.045 0.519 0.01" pos="2.319 0 0.22"
+                      contype="0" conaffinity="0"/>  
             </body>
         </body>
 
 
         <!-- Define the sliding box -->
-        <body name="box" pos="0.75 0.0 0.1">
+        <!-- <body name="box" pos="0.75 0.0 0.1">
             <geom type="box" size="0.1 0.1 0.1" rgba="0.5 0.5 0.5 1"/>
             <joint name="slide" type="slide" axis="1 0 0" />
-        </body>
+        </body> -->
 <!-- 
 
         <actuator>
