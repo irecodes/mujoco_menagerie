@@ -22,11 +22,11 @@
     <worldbody>
         <body name="table">
             <body name="table_surface">
-                <geom name="surface" type="box" material="white" size="1.064 0.609 0.0505" pos="1.3 0 0.15"
+                <geom name="surface" type="box" material="white" size="1.064 0.609 0.0505" pos="1.15 0 0.15"
                       condim="4" friction="0.08 0.08 0.0" priority="1"
                       solref="0.0125 0.5" solimp="0.9 0.999 0.001 0.5 2"/>
             </body>
-            <body name="rim">
+            <!-- <body name="rim">
                 <geom name="rim_home_l" class="rim" type="mesh" mesh="rim" pos="0.281 0.322 0.2008"/>
                 <geom name="rim_home_r" class="rim" type="mesh" mesh="rim" pos="0.281 -0.322 0.2008" quat="0 0 0 1"/>
                 <geom name="rim_home_top" class="rim" size="0.045 0.519 0.01" pos="0.281 0 0.22"
@@ -37,7 +37,7 @@
                 <geom name="rim_away_r" class="rim" type="mesh" mesh="rim" pos="2.319 -0.322 0.2008" quat="0 0 0 1"/>
                 <geom name="rim_away_top" class="rim" size="0.045 0.519 0.01" pos="2.319 0 0.22"
                       contype="0" conaffinity="0"/>  
-            </body>
+            </body> -->
         </body>
 
 

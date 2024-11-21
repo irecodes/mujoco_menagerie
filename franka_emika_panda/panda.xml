@@ -240,13 +240,11 @@
                         <geom class="fingertip_pad_collision_4"/>
                         <geom class="fingertip_pad_collision_5"/> 
                       </body>
-                      <body name="mallet" pos="0 0 0.15" quat="1 -1 0 0">
-                          <!-- Collision geom -->
+                      <!-- <body name="mallet" pos="0 0 0.15" quat="1 -1 0 0">
                           <geom mesh="mallet" material="white" class="collision"/>
-                          <!-- Visual geom -->
                           <geom mesh="mallet" material="white" class="visual" rgba="0.8 0 0.2 1"/>
-                          <inertial mass="0.73" pos="-0.01 0 0.03" diaginertia="0.001 0.0025 0.0017"/>
-                      </body>
+                          <inertial mass="0.03" pos="-0.01 0 0.03" diaginertia="0.001 0.0025 0.0017"/>
+                      </body> -->
 
                       
                       
